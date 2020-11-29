@@ -84,7 +84,6 @@ npx
 npm
 yarn
 react-native
-zsh-interactive-cd
 common-aliases
 zsh-completions
 zsh-autosuggestions

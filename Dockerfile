@@ -4,7 +4,7 @@ FROM node:lts
 RUN apt update && apt-get update && apt -y upgrade && apt-get -y upgrade
 
 # Install packages
-RUN apt install -y curl openssl zsh grep nano git xclip xsel && apt-get install -y fzf
+RUN apt install -y curl openssl zsh grep nano git xclip xsel
 
 # Install oh-my-zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -28,7 +28,7 @@ RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.
 RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 RUN git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 
-RUN npm install -g yarn ts-node typescript eslint @types/node @types/typescript @types/eslint 
+RUN npm install -g ts-node typescript eslint @types/node @types/eslint 
 
 # Set zsh as default shell
 RUN chsh -s $(which zsh)
