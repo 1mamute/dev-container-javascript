@@ -45,7 +45,7 @@ Stop bloating your machine with packages and dependencies, code inside the Docke
   Pull the image from DockerHub, run and attach your shell and/or VSCode (using [Remote - Container Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)) to the container
   ```
   docker pull 1mamute/dev-container-javascript:latest
-  docker run -it 1mamute/dev-container-javascript:latest /bin/bash
+  docker run -it -u jsdev 1mamute/dev-container-javascript:latest /bin/bash
   ```
 
 # TODO:
